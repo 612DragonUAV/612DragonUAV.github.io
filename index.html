@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="it">
+
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.js"></script>
+  <meta charset="utf-8" />
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    canvas {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <script>
+    function setup() {
+      createCanvas(1920, 1100);
+    }
+
+    function draw() {
+      background(250);
+
+
+      //testa
+      fill(156, 156, 156); //painting
+      square(mouseX - 100, mouseY - 400, 200);
+
+
+      //occhi
+      fill(16, 16, 16); //painting
+      square(mouseX - 60, mouseY - 350, 20); //occhio sx
+      square(mouseX + 50, mouseY - 350, 20); //occhio dx
+
+
+      //naso
+      fill(16, 16, 16); //painting
+      triangle(mouseX - 30, mouseY - 300, mouseX, mouseY - 320, mouseX + 30, mouseY - 300);
+
+
+      //bocca
+      fill(16, 16, 16); //painting
+      line(mouseX - 50, mouseY - 250, mouseX + 50, mouseY - 250);
+
+
+      //antenne
+      fill(156, 156, 156); //painting
+      line(mouseX - 50, mouseY - 400, mouseX - 50, mouseY - 475); //antenna sx
+      line(mouseX + 50, mouseY - 400, mouseX + 50, mouseY - 475); //antenna dx
+      circle(mouseX - 50, mouseY - 485, 20); //cima antenna sx
+      circle(mouseX + 50, mouseY - 485, 20); //cima antenna dx
+
+      //corpo
+      fill(156, 156, 156); //painting
+      rect(mouseX - 150, mouseY - 200, 300, 400);
+
+
+      //braccia
+      fill(156, 156, 156); //painting
+      rect(mouseX - 350, mouseY - 150, 200, 50); //braccio sx
+      rect(mouseX + 300, mouseY - 100, 50, 250); //avambraccio sx
+      rect(mouseX + 150, mouseY - 150, 200, 50); //braccio dx
+      rect(mouseX - 350, mouseY - 100, 50, 250); //avambraccio dx
+
+
+      //mani
+      //mani parte esterna
+      fill(255, 0, 0); //painting
+      arc(mouseX - 325, mouseY + 200, 120, 140, PI, TWO_PI); //dx
+      arc(mouseX + 325, mouseY + 200, 120, 140, PI, TWO_PI); //sx
+      //mani parte interna
+      fill(250, 250, 250); //painting
+      arc(mouseX - 325, mouseY + 200, 80, 100, PI, TWO_PI); //sx
+      arc(mouseX + 325, mouseY + 200, 80, 100, PI, TWO_PI); //dx
+
+
+      //gambe
+      fill(156, 156, 156); //painting
+      rect(mouseX + 50, mouseY + 200, 75, 300); //gamba dx
+      rect(mouseX - 125, mouseY + 200, 75, 300); //gamba sx
+
+
+      //piedi
+      fill(0, 0, 255); //painting
+      rect(mouseX - 200, mouseY + 500, 150, 50); //piede sx
+      rect(mouseX + 50, mouseY + 500, 150, 50); //piede dx
+
+      line(1000, 0, 1000, 2000);
+
+
+    }
+  </script>
+</body>
+
+</html>
